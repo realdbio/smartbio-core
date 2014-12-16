@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'ramshackle:smartbio',
-  summary: ' /* contains UI elements and back end logic for EHR functionality  */ ',
+  name: 'ramshackle:smartbio-core',
+  summary: 'contains UI elements and back end logic for EHR functionality',
   version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  git: 'https://github.com/realdbio/smartbio-core.git'
 });
 
 Package.onUse(function(api) {
@@ -39,13 +39,12 @@ Package.onUse(function(api) {
 //        ['client']
 //    );
 //
-//    api.addFiles(
-//        [
-//            'server/init-server.js',
-//            'server/methods.js',
-//        ],
-//        ['server']
-//    );
+    api.addFiles(
+        [
+            'server/init-server.js'
+        ],
+        ['server']
+    );
 });
 
 Package.onTest(function(api) {
