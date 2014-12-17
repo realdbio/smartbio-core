@@ -1,6 +1,6 @@
 Package.describe({
   name: 'ramshackle:smartbio-core',
-  summary: 'contains UI elements and back end logic for EHR functionality',
+  summary: 'Meteor package that contains UI elements and back end logic for PHR functionality',
   version: '1.0.0',
   git: 'https://github.com/realdbio/smartbio-core.git'
 });
@@ -9,7 +9,14 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.1');
 
     api.use(
-        ['mongo', 'aldeed:collection2', 'accounts-base', 'matteodem:easy-search', 'peerlibrary:async', 'sergeyt:typeahead', 'ramshackle:realdb-facts'],
+        [
+            'mongo',
+            'aldeed:collection2',
+            'accounts-base',
+            'matteodem:easy-search',
+            'peerlibrary:async',
+            'pahans:reactive-modal',
+            'ramshackle:realdb-facts'],
         ['client', 'server']
     );
 
@@ -27,17 +34,12 @@ Package.onUse(function(api) {
 //        ['client', 'server']
 //    );
 //
-//    api.addFiles(
-//        [
-//            'client/init-client.js',
-//            'client/entity.html',
-//            'client/entity.js',
-//            'client/etype.html',
-//            'client/etype.js',
-//            'client/dataloader.html',
-//            'client/dataloader.js'],
-//        ['client']
-//    );
+    api.addFiles(
+        [
+            'html/conditions.html',
+            'client/conditions.js'],
+        ['client']
+    );
 //
     api.addFiles(
         [
